@@ -1,0 +1,93 @@
+{
+  "name": "strifx",
+  "version": "0.1.0",
+  "description": "A tiny utility for constructing strings conditionally — like clsx for any string.",
+  "type": "module",
+  "exports": {
+    ".": {
+      "import": {
+        "types": "./dist/index.d.ts",
+        "default": "./dist/index.js"
+      },
+      "require": {
+        "types": "./dist/index.d.cts",
+        "default": "./dist/index.cjs"
+      }
+    },
+    "./template": {
+      "import": {
+        "types": "./dist/template.d.ts",
+        "default": "./dist/template.js"
+      },
+      "require": {
+        "types": "./dist/template.d.cts",
+        "default": "./dist/template.cjs"
+      }
+    },
+    "./react": {
+      "import": {
+        "types": "./dist/react.d.ts",
+        "default": "./dist/react.js"
+      },
+      "require": {
+        "types": "./dist/react.d.cts",
+        "default": "./dist/react.cjs"
+      }
+    }
+  },
+  "files": [
+    "dist"
+  ],
+  "scripts": {
+    "build": "tsup",
+    "test": "vitest run",
+    "test:watch": "vitest",
+    "typecheck": "tsc --noEmit",
+    "size": "size-limit",
+    "prepublishOnly": "npm run build",
+    "format": "biome format --write && biome check --write",
+    "lint": "biome lint",
+    "release": "release-it"
+  },
+  "keywords": [
+    "string",
+    "conditional",
+    "template",
+    "clsx",
+    "utility",
+    "tagged-template"
+  ],
+  "license": "MIT",
+  "peerDependencies": {
+    "react": ">=18.0.0"
+  },
+  "peerDependenciesMeta": {
+    "react": {
+      "optional": true
+    }
+  },
+  "devDependencies": {
+    "@biomejs/biome": "^2.4.4",
+    "@size-limit/preset-small-lib": "^11.0.0",
+    "@testing-library/react": "^16.0.0",
+    "@types/react": "^19.0.0",
+    "jsdom": "^28.1.0",
+    "react": "^19.0.0",
+    "react-dom": "^19.0.0",
+    "release-it": "^19.2.4",
+    "size-limit": "^11.0.0",
+    "tsup": "^8.0.0",
+    "typescript": "^5.5.0",
+    "vitest": "^2.0.0"
+  },
+  "size-limit": [
+    {
+      "path": "dist/index.js",
+      "limit": "500 B"
+    },
+    {
+      "path": "dist/react.js",
+      "limit": "750 B"
+    }
+  ]
+}
