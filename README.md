@@ -2,8 +2,8 @@
 
 > Like `clsx` for strings — conditionally compose any string, not just classNames.
 
-[![npm](https://img.shields.io/npm/v/strifx)](https://www.npmjs.com/package/strifx)
-[![size](https://img.shields.io/bundlephobia/minzip/strifx)](https://bundlephobia.com/package/strifx)
+[![npm](https://img.shields.io/npm/v/@mrmartineau/strifx)](https://www.npmjs.com/package/@mrmartineau/strifx)
+[![size](https://img.shields.io/bundlephobia/minzip/@mrmartineau/strifx)](https://bundlephobia.com/package/@mrmartineau/strifx)
 
 ## The Problem
 
