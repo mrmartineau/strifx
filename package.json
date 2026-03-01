@@ -1,5 +1,5 @@
 {
-  "name": "strifx",
+  "name": "@mrmartineau/strifx",
   "version": "0.1.0",
   "description": "A tiny utility for constructing strings conditionally — like clsx for any string.",
   "type": "module",

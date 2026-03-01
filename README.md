@@ -22,7 +22,7 @@ const address = [street, unit ? `Unit ${unit}` : '', `${city}, ${state} ${zip}`,
 ## The Solution
 
 ```ts
-import { strifx, when } from 'strifx';
+import { strifx, when } from '@mrmartineau/strifx';
 
 const greeting = strifx`Hello${when(name, { prefix: ' ' })}${when(title, { prefix: ', ' })}! Welcome to ${place}.`;
 
@@ -37,10 +37,10 @@ const address = strifx.join('\n')(
 ## Install
 
 ```bash
-npm install strifx
-yarn add strifx
-pnpm add strifx
-bun add strifx
+npm install @mrmartineau/strifx
+yarn add @mrmartineau/strifx
+pnpm add @mrmartineau/strifx
+bun add @mrmartineau/strifx
 ```
 
 ## API
@@ -48,7 +48,7 @@ bun add strifx
 ### `strifx` — Tagged Template
 
 ```ts
-import { strifx, when } from 'strifx';
+import { strifx, when } from '@mrmartineau/strifx';
 
 strifx`Hello ${when(name)} world`;
 // name = "Zander" → "Hello Zander world"
@@ -129,7 +129,7 @@ strifx({
 Create reusable templates with named placeholders:
 
 ```ts
-import { template, when } from 'strifx/template';
+import { template, when } from '@mrmartineau/strifx/template';
 
 // Tagged template style
 const greeting = template`Dear${when('title', { prefix: ' ' })}${when('name', { prefix: ' ' })}!`;
@@ -146,7 +146,7 @@ const greeting = template({
 ### React (`strifx/react`)
 
 ```tsx
-import { useStrifx, when } from 'strifx/react';
+import { useStrifx, when } from '@mrmartineau/strifx/react';
 
 function Greeting({ user }) {
   const title = useStrifx`Dear${when(user.title, { prefix: ' ' })}${when(user.name, { prefix: ' ' })}`;
@@ -157,7 +157,7 @@ function Greeting({ user }) {
 Conditional `ReactNode[]` with separators:
 
 ```tsx
-import { strifxReact, when } from 'strifx/react';
+import { strifxReact, when } from '@mrmartineau/strifx/react';
 
 function StatusBar({ user, notifications }) {
   const parts = strifxReact(' · ')(
